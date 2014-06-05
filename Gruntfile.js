@@ -24,6 +24,10 @@ module.exports = function(grunt) {
                     "js/application.min.js" : ["js/application.min.js"]
                 }
             }
+        },
+        watch: {
+          files: ["css/scss/style.scss"],
+          tasks: ['sass']
         }
     });
 
@@ -31,6 +35,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-sass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('default', ['sprockets', 'sass']);
     grunt.registerTask('deploy', ['sprockets', 'sass', 'cssmin', 'uglify']);

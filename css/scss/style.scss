@@ -27,8 +27,11 @@ body {
     color: #333;
     box-shadow: 3px 3px 3px #000;
     -webkit-transition-property: top;
+    -moz-transition-property: top;
     -webkit-transition-timing-function: linear;
+    -moz-transition-timing-function: linear;
     -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
 
     p {
         padding: 20px 20px 10px 20px;
@@ -77,11 +80,19 @@ body {
 
         #localVideo {
             -webkit-transform-origin: bottom right;
+            -moz-transform-origin: bottom right;
+            transform-origin: bottom right;
             -webkit-transition-property: -webkit-transform;
+            -moz-transition-property: -moz-transform;
+            transition-property: transform;
             -webkit-transition-duration: 1s;
+            -moz-transition-duration: 1s;
+            transition-duration: 1s;
         
             &.connected {
                 -webkit-transform: scale(0.25, 0.25);
+                -moz-transform: scale(0.25, 0.25);
+                transform: scale(0.25, 0.25);
             } 
         }
     }
@@ -162,7 +173,9 @@ body {
         opacity: 0;
         cursor: pointer;
         -webkit-transition-property: opacity;
+        -moz-transition-property: opacity;
         -webkit-transition-duration: 0.5s;
+        -moz-transition-duration: 0.5s;
 
         &.active {
             opacity: 1;

@@ -19,8 +19,11 @@ body {
   color: #333333;
   box-shadow: 3px 3px 3px black;
   -webkit-transition-property: top;
+  -moz-transition-property: top;
   -webkit-transition-timing-function: linear;
-  -webkit-transition-duration: 0.5s; }
+  -moz-transition-timing-function: linear;
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s; }
   #uuid p {
     padding: 20px 20px 10px 20px;
     text-align: right;
@@ -56,10 +59,18 @@ body {
       left: 0; }
     #wrapper .video #localVideo {
       -webkit-transform-origin: bottom right;
+      -moz-transform-origin: bottom right;
+      transform-origin: bottom right;
       -webkit-transition-property: -webkit-transform;
-      -webkit-transition-duration: 1s; }
+      -moz-transition-property: -moz-transform;
+      transition-property: transform;
+      -webkit-transition-duration: 1s;
+      -moz-transition-duration: 1s;
+      transition-duration: 1s; }
       #wrapper .video #localVideo.connected {
-        -webkit-transform: scale(0.25, 0.25); }
+        -webkit-transform: scale(0.25, 0.25);
+        -moz-transform: scale(0.25, 0.25);
+        transform: scale(0.25, 0.25); }
   #wrapper #chatSection {
     width: 380px;
     height: 300px;
@@ -119,7 +130,9 @@ body {
     opacity: 0;
     cursor: pointer;
     -webkit-transition-property: opacity;
-    -webkit-transition-duration: 0.5s; }
+    -moz-transition-property: opacity;
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s; }
     #members li.active {
       opacity: 1; }
     #members li:hover {
